@@ -65,3 +65,23 @@ form .usuario{
     background: #007bff;;
     transition: .5s;
 }
+
+.usuario input:focus ~ label,
+.usuario input:focus ~ label{
+    top: -5px;
+    color:#007bff;;
+}
+
+.usuario input:focus ~ span::before,
+.usuario input:focus ~span::before { 
+    width: 100%;
+}
+
+.recordar{ 
+    margin: -5px 0 20px 5px;
+    color: blueviolet;
+    cursor: pointer;
+}
+.recordar :hover{
+    text-decoration: underline;
+}
