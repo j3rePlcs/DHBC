@@ -68,14 +68,14 @@ form .usuario{
     left: 0;
     width: 100%;
     height: 2px;
-    background: #007bff;;
+    background: #608bd1;
     transition: .5s;
 }
 
 .usuario input:focus ~ label,
 .usuario input:focus ~ label{
     top: -5px;
-    color:#007bff;;
+    color:#608bd1;
 }
 
 .usuario input:focus ~ span::before,
@@ -85,7 +85,7 @@ form .usuario{
 
 .recordar{ 
     margin: -5px 0 20px 5px;
-    color: blueviolet;
+    color: rgb(1, 15, 51);
     cursor: pointer;
 }
 .recordar :hover{
