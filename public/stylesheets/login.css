@@ -5,6 +5,12 @@ body{
     background: #c9ccd1;
     height: 100vh;
 }
+.errores {
+    color: #D8000C;
+    border-color: #ccc;
+    opacity: 4;
+    font-weight:bold;
+}
 
 .formulario{
     position: absolute;
