@@ -70,24 +70,44 @@ body {
 	border-color: #e74c3c;
 }
 
-.usuario input:focus ~ label,
-.usuario input:focus ~ label{
-    top: -5px;
-    color:#608bd1;
+.form-control i {
+	visibility: hidden;
+	position: absolute;
+	top: 40px;
+	right: 10px;
 }
 
-.usuario input:focus ~ span::before,
-.usuario input:focus ~span::before { 
-    width: 100%;
+.form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
 }
 
 .recordar{ 
     margin: -5px 0 20px 5px;
-    color: rgb(1, 15, 51);
+    color: rgb(10, 50, 153);
     cursor: pointer;
+	text-decoration: underline;
 }
-.recordar :hover{
-    text-decoration: underline;
+.recordar:hover{
+    text-decoration:none;
+	color: #10043a;
 }
 input[type="submit"]{
     width: 100%;
