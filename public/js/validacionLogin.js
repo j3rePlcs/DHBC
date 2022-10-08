@@ -1,20 +1,24 @@
-window.addEventListener("load", function() {
+const form = document.getElementById('form');
+const usuario = document.getElementById('username');
 
-   let form = document.querySelector (".form")
+const password = document.getElementById('password');
 
-    form.addEventListener("submit", (e) => {  
-     let errores = [];
-     let campoUsuario = document.querySelector("input#name");
+
+form.addEventListener('submit', e => {
+	e.preventDefault();
+	
+	checkInputs();
+});
      
-    if (campoUsuario.value.length < 4) {
+if (campoUsuario.value.length < 4) {
       errores.push("El campo de Usuario debe completarse");
     }
 
      let campoContraseña = document.querySelector("input#contra");
 
-    if (campoContraseña.value.length < 4){
+  if (campoContraseña.value.length < 4){
       errores.push("El campo de Contraseña debe completarse");
-    }
+  }
     if (errores.length > 0 ){
       e.preventDefault ();
 
@@ -22,7 +26,5 @@ window.addEventListener("load", function() {
       
       errores.forEach(error => {
          ulErrores.innerHTML += `<li>${error}</li>`
-        });
-    }
-  });
-})
+    });
+}
