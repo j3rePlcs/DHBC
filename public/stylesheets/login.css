@@ -14,35 +14,28 @@ body {
 	min-height: 100vh;
 	margin: 0;
 }
-.errores {
-    color: #D8000C;
-    border-color: #ccc;
-    opacity: 4;
-    font-weight:bold;
+.contenedor {
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	width: 400px;
+	max-width: 100%;
 }
 
-.formulario{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background: white;
-    border-radius: 10px;
+.formulario {
+	border-bottom: 1px solid #b2b6c3;
+    background-color: #c5c7ca;
+    padding: 20px 40px;
 }
 
-.formulario h3{
-    text-align: center;
-    padding: 0 0 5px 0;
-    border-radius: 1px solid silver;
+.formulario h3 {
+	margin: 0;
 }
 
-.formulario form{
-    padding: 0 40px;
-    box-sizing: border-box;
-    transform-style: preserve-3d;
+.form {
+	padding: 30px 40px;	
 }
-
 form .usuario{
     position: relative;
     border-bottom: 2px solid #adadad;
