@@ -20,15 +20,22 @@ function checkInputs() {
 		setSuccessFor(usuario);
 	}
 
-	
 	if(passwordValue === '') {
 		setErrorFor(password, 'Contraseña no debe ingresar en blanco.');
 	} else {
 		setSuccessFor(password);
 	}
-      let ulErrores = document.querySelector(".errores ul");
-      
-      errores.forEach(error => {
-         ulErrores.innerHTML += `<li>${error}</li>`
-    });
+
+
+  function setErrorFor(input, message) {
+	const formControl = input.parentElement;
+	const small = formControl.querySelector('small');
+	formControl.className = 'form-control error';
+	small.innerText = message;
+  }
+
+  function setSuccessFor(input) {
+	const formControl = input.parentElement;
+	formControl.className = 'form-control success';
+  }
 }
