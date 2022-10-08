@@ -5,17 +5,22 @@
     <meta name ="viewport" content="width-device-witdt, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimun-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/login .css">
+    <script src="https://kit.fontawesome.com/f72b2d8ef8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="formulario">
-     <h3>Hola, introduce tu usuario y clave de acceso y entra en DHBC online:</h3>
-     <div class="errores">
-        <ul></ul> 
-     </div>
-     <form method="POST" class="form" id="form">
-        <div class="usuario">
-            <input type="text" id="name" required>
-            <label>Ingrese su usuario</label>
+    <div class="contenedor">
+        <div class="formulario">
+            <h3>Hola, introduce tu usuario y clave de acceso y entra en DHBC online:</h3>
+        </div>
+        <form method="POST" class="form" id="form">
+        <div class>
+            <div class="form-control">
+            <label for="username">Usuario</label>
+            <input type="text" id="username" placeholder="ejemplo@gmail.com">
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+            </div>
         </div>
         <div class="usuario">
             <input type="password" id="contra" required>
