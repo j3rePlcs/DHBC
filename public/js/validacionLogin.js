@@ -10,18 +10,22 @@ form.addEventListener('submit', e => {
 	checkInputs();
 });
      
-if (campoUsuario.value.length < 4) {
-      errores.push("El campo de Usuario debe completarse");
-    }
+function checkInputs() {
+	const usuarioValue = usuario.value.trim();
+	const passwordValue = password.value.trim();
+	
+	if(usuarioValue === '') {
+		setErrorFor(usuario, 'No puede dejar el usuario en blanco');
+	} else {
+		setSuccessFor(usuario);
+	}
 
-     let campoContraseña = document.querySelector("input#contra");
-
-  if (campoContraseña.value.length < 4){
-      errores.push("El campo de Contraseña debe completarse");
-  }
-    if (errores.length > 0 ){
-      e.preventDefault ();
-
+	
+	if(passwordValue === '') {
+		setErrorFor(password, 'Contraseña no debe ingresar en blanco.');
+	} else {
+		setSuccessFor(password);
+	}
       let ulErrores = document.querySelector(".errores ul");
       
       errores.forEach(error => {
