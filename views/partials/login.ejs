@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name ="viewport" content="width-device-witdt, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimun-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="/css/login .css">
 </head>
 <body>
     <div class="formulario">
      <h3>Hola, introduce tu usuario y clave de acceso y entra en DHBC online:</h3>
-     <form method="post">
+     <div class="errores">
+        <ul></ul> 
+     </div>
+     <form method="post" class="form">
         <div class="usuario">
-            <input type="text" required>
+            <input type="text" id="name" required>
             <label>Ingrese su usuario</label>
         </div>
         <div class="usuario">
-            <input type="password" required>
+            <input type="password" id="contra" required>
             <label>Contraseña</label>
         </div>
         <div>
