@@ -14,5 +14,13 @@ window.addEventListener("load", function() {
      if (campoContraseña.value.length < 4){
       errores.push("El campo de Contraseña debe completarse");
      }
-})
-})
+       if (errores.length > 0 ){
+        e.preventDefault ();
+  
+        let ulErrores = document.querySelector(".errores ul");
+        errores.forEach(error => {
+           ulErrores.innerHTML += `<li>${error}</li>`
+        });
+     }
+   });
+  })
