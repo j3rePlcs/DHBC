@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head', {title: "DHBC - Turnos" }) %>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/turns.css">
+
+    <body>
+        <%- include('partials/header') %>
+            <main>
+                <div class="container-turn">
+                    <div class="div-turn">
+                        <h3>Generar un nuevo turno</h3>
+                        <button class="button">Generar</button>
+                    </div>
+                    <div class="div-turn">
+                        <h3>Llamar al proximo en espera</h3>
+                        <button class="button">Llamar</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="title">
+                        <h1>Ultimos tres llamados</h1>
+                    </div>
+                    <div class="article-turn">
+                        <div class="card-turn">
+                            <div class="number-box">
+                                <h2>Caja 1</h2>
+                            </div>
+                            <div class="number-turn">
+                                <p>A21</p>
+                            </div>
+                        </div>
+                        <div class="card-turn">
+                            <div class="number-box">
+                                <h2>Caja 1</h2>
+                            </div>
+                            <div class="number-turn">
+                                <p>A20</p>
+                            </div>
+                        </div>
+                        <div class="card-turn">
+                            <div class="number-box">
+                                <h2>Caja 1</h2>
+                            </div>
+                            <div class="number-turn">
+                                <p>B20</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+    </body>
+
+</html>

@@ -8,5 +8,8 @@ router.get('/', function(req, res, next) {
 router.get('/login', function(req, res, next) {
   res.render('login', { title: 'DHBC' });
 });
+router.get('/admin/turnos', function(req, res, next) {
+  res.render('turns', { title: 'DHBC' });
+});
 
 module.exports = router;
