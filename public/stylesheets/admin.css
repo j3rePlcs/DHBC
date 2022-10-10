@@ -60,3 +60,20 @@
 .boton.Des {
     background: rgb(221, 6, 6);
 }
+.boton.Gen:hover{
+    background: rgb(128, 163, 58);
+}
+
+.boton.Des:hover {
+    background: rgb(90, 18, 18);
+}
+
+.small {
+    font-size: 400%;
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+    outline: none;
+    border: none;
+    background: none;
+}
