@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html>
-<%- include('./partials/head') %>
-<script>
-  setTimeout("document.location = document.location", 60000)
-</script>
-<body>
+<%- include('partials/head', {title: "DHBC" }) %>
+  <script>
+    setTimeout("document.location = document.location", 60000)
+  </script>
+
+  <body>
     <%- include('./partials/header') %>
-    <div class="title">
-      <h1>Atento a tu numero</h1>
-    </div>
-    <div class="article-turn">
-      <div class="card-turn">
-        <div class="number-box">
-          <h2>Caja 1</h2>
+      <main>
+        <div class="title">
+          <h1>Esté atento a su numero</h1>
         </div>
-        <div class="number-turn">
-          <p>A21</p>
+        <div class="article-turn">
+          <div class="card-turn">
+            <div class="number-box">
+              <h2>Caja 1</h2>
+            </div>
+            <div class="number-turn">
+              <p>A21</p>
+            </div>
+          </div>
+          <div class="card-turn">
+            <div class="number-box">
+              <h2>Caja 1</h2>
+            </div>
+            <div class="number-turn">
+              <p>A20</p>
+            </div>
+          </div>
+          <div class="card-turn">
+            <div class="number-box">
+              <h2>Caja 1</h2>
+            </div>
+            <div class="number-turn">
+              <p>B20</p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card-turn">
-        <div class="number-box">
-          <h2>Caja 1</h2>
-        </div>
-        <div class="number-turn">
-          <p>A20</p>
-        </div>
-      </div>
-      <div class="card-turn">
-        <div class="number-box">
-          <h2>Caja 1</h2>
-        </div>
-        <div class="number-turn">
-          <p>B20</p>
-        </div>
-      </div>
-    </div>
+      </main>
   </body>
 
 </html>
