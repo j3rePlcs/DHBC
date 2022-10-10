@@ -31,27 +31,15 @@ module.exports = function (sequelize, DataTypes) {
     let User = sequelize.define(name, cols, config);
 
     User.associate = function (models) {
-
-        User.hasMany(models.Card, {
-            "as": "cards",
-            "foreignKey": "idUser"
-        });
-
         User.belongsTo(models.StatusUser, {
             "as": "status",
             "foreignKey": "idStatusUser"
         });
 
-        User.belongsTo(models.Delivery, {
-            "as": "ubication",
-            "foreignKey": "postalCode"
-        });
-
-        User.hasMany(models.Cart, {
-            "as": "user",
-            "foreignKey": "idUser"
+        User.belongsTo(models.Ordely_turns, {
+            "as": "ordely_turns",
+            "foreignKey": "idOrdely_turns"
         });
     };
-
     return User
 }
