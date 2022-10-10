@@ -1,10 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
     let name = "User";
     let cols = {
-        "dateCreation": {
-            "type": DataTypes.DATE,
-            "allowNull": false
-        },
         "name": {
             "type": DataTypes.STRING(15),
             "allowNull": false
@@ -16,16 +12,24 @@ module.exports = function (sequelize, DataTypes) {
             "type": DataTypes.STRING(45),
             "allowNull": false
         },
+        "created_at": {
+            "type": DataTypes.DATE,
+            "allowNull": false
+        },
+        "updated_at": {
+            "type": DataTypes.DATE,
+            "allowNull": false
+        },
         "idStatusUser": {
             "type": DataTypes.INTEGER
         },
-        "idOrdely_turns": {
+        "idOrdely_turn": {
             "type": DataTypes.INTEGER
         }
     };
     let config = {
         "tableName": "users",
-        "timestamps": false
+        "timestamps": true
     };
 
     let User = sequelize.define(name, cols, config);
@@ -36,8 +40,8 @@ module.exports = function (sequelize, DataTypes) {
             "foreignKey": "idStatusUser"
         });
 
-        User.belongsTo(models.Ordely_turns, {
-            "as": "ordely_turns",
+        User.belongsTo(models.Orderly_turn, {
+            "as": "orderly_turn",
             "foreignKey": "idOrdely_turns"
         });
     };
