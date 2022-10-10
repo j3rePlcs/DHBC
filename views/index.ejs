@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
-<%- include('partials/head', {title: "DHBC" }) %>
-  <script>
-    setTimeout("document.location = document.location", 60000)
-  </script>
-
+<html>
+<%- include('./partials/head') %>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
   <body>
     <%- include('./partials/header') %>
       <main>
@@ -38,6 +35,6 @@
           </div>
         </div>
       </main>
-  </body>
-
-</html>
+      <%- include('./partials/footer') %>
+    </body> 
+  </html>
