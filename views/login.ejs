@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
-    <%- include('partials/head', {title: "DHBC - Login" }) %>
+<head>
+    <%- include('./partials/head') %>
     <link rel="stylesheet" href="/stylesheets/login.css">
-    <script src="https://kit.fontawesome.com/f72b2d8ef8.js" crossorigin="anonymous"></script>
+</head>
 <body>
+    <%- include('./partials/header') %>
     <div class="contenedor">
         <div class="formulario">
             <h3>Hola, introduce tu usuario y clave de acceso y entra en DHBC online:</h3>
@@ -18,7 +19,7 @@
             <small>Error message</small>
             </div>
         </div>
-        <div class>
+        <div>
             <div class="form-control">
             <label>Contraseña</label>
             <input type="password" id="password" placeholder="Contraseña">
@@ -30,11 +31,12 @@
         <div>
             <input name="" type="checkbox" value=""/><span class="recordar">Recordar</span>
         </div>
-        <div>
         <div class="recordar">Olvido su contraseña</div>
             <input type="submit" value="Ingresar">
         </div>
+      </form>
     </div>
+    <%- include('./partials/footer') %>
     <script src="\js\validacionLogin.js"></script>
 </body>
 </html>
