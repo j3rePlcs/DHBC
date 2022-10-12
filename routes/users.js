@@ -8,9 +8,9 @@ router.get('/', function(req, res, next) {
 });
 
 //editar
-router.get('/edit:id', userController.edit)
+//router.get('/edit:id', userController.edit)
 
-router.get('/edit:id', userController.edit)
+//router.get('/edit:id', userController.edit)
 
 
 module.exports = router;

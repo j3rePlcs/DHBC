@@ -42,6 +42,16 @@
     background-color: #608bd1;
 }
 
+/* generar consulta */
+.tipo-consulta {
+    margin-bottom: 40px;
+}
+
+.tipo-consulta label{
+    font-weight: bold;
+}
+
+
 /* tarjetas */
   .number-box h2{
     font-size: 30px;
