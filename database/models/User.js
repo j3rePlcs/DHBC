@@ -23,4 +23,16 @@ module.exports = function (sequelize, DataTypes) {
         "idOrdely_turn": {
             "type": DataTypes.INTEGER
         }
-    }}
+    };
+    let config = {
+        "tableName": "users",
+        "timestamps": true
+    };
+
+    let User = sequelize.define(name, cols, config)
+        User.belongsTo(models.Orderly_turn, {
+            "as": "orderly_turn",
+            "foreignKey": "idOrdely_turns"
+        });
+    };
+    return User
