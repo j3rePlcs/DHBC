@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    
+
         let name = "Orderly_turn";
         let cols = {
             "id": {
@@ -18,4 +18,17 @@ module.exports = function (sequelize, DataTypes) {
             "created_at": {
                 "type": DataTypes.DATE,
                 "allowNull": false
-            }}}
+            },
+            "updated_at": {
+                "type": DataTypes.DATE,
+                "allowNull": false
+            },
+            "delete_at": {
+                "type": DataTypes.DATE,
+                "allowNull": false
+            },
+            "idOperation_type": {
+            "type": DataTypes.INTEGER
+            }
+    };
+}
