@@ -1,28 +1,26 @@
 //crud
-const db = require("./../database/models");
+const db = require("./../../database/models");
 // controlador de modelos
 const userController = {
+
     list: function (req, res) {
         db.User.findAll({
-            include:[{association:"orderly_turn"}]
+            include:[{association:"orderlyTurn"}]
         })
         .then(users=>{users.dataValues})
         .then(users=>{
-            res.render("turns");
+            res.render("turns",{users});
         })
+    },
+    createView:function(req, res) {
+        res.render("register")
     },
 
     create: function (req, res) {
-        let created_at = new Date();
-        let month = created_at.getMonth() + 1;
-        created_at = created_at.getFullYear() + "-" + month + "-" + created_at.getDate();
-
         let createdUser = {
-            userName: req.body.name,
-            email: req.body.userEmail,
-            passwordUser: req.body.passwordUser,
-            created_at: req.body.created_at,
-            updated_at: req.body.updated_at,
+            userName: req.body.username,
+            email: req.body.email,
+            passwordUser: req.body.password
         };
 
         db.User.create(createdUser)
