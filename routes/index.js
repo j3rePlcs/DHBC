@@ -15,4 +15,8 @@ router.get('/admin', function(req, res, next) {
   res.render('admin');
 });
 
+router.get("/",(req, res)=>{res.send("hola")})
+router.use("/turnos", turnosRoute)
+router.use("/user",loginRoute)
+
 module.exports = router;

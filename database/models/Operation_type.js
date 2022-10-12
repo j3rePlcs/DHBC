@@ -14,8 +14,8 @@ module.exports = function (sequelize, DataTypes) {
 
     Operation_type.associate = function (models) {
 
-        Operation.hasMany(models.Product, {
-            "as": "operation_type",
+        Operation_type.belongsTo(models.Ordely_turn, {
+            "as": "Operation_type",
             "foreignKey": "idOperation_type"
         });
 

@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    let name = "Users";
+    let name = "User";
     let cols = {
         "userName": {
             "type": DataTypes.STRING(45),
@@ -19,9 +19,6 @@ module.exports = function (sequelize, DataTypes) {
         "updated_at": {
             "type": DataTypes.DATE,
             "allowNull": false
-        },
-        "idOrdely_turn": {
-            "type": DataTypes.INTEGER
         }
     };
     let config = {
@@ -29,10 +26,12 @@ module.exports = function (sequelize, DataTypes) {
         "timestamps": true
     };
 
-    let User = sequelize.define(name, cols, config)
+    const User = sequelize.define(name, cols, config)
+    User.associate = function(models){
         User.belongsTo(models.Orderly_turn, {
             "as": "orderly_turn",
-            "foreignKey": "idOrdely_turns"
+            "foreignKey": "idUser"
         });
+    }
     };
     return User

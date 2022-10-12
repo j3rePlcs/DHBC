@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "yes",
+    "password": "",
     "database": "bd_dhbc",
     "host": "127.0.0.1",
     "dialect": "mysql"
