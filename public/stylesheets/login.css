@@ -1,13 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
-
-* {
-	box-sizing: border-box;
-}
-
 body {
 	background-color: #608bd1;
-	font-family: 'Open Sans', sans-serif;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -17,7 +9,7 @@ body {
 }
 
 .contenedor {
-	margin-top: 150px;
+	margin-top: 50px;
 	background-color: #fff;
 	border-radius: 5px;
 	box-shadow: 0 2px 5px rgb(0 0 0 / 30%);

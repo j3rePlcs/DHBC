@@ -1,0 +1,53 @@
+.div-turn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0 25px 0;
+    padding-bottom: 20px;
+}
+
+.div-turn h3 {
+    font-size: 30px;
+}
+
+.title h1 {
+    font-size: 50px;
+}
+
+.container-turn {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.boton {
+    margin: 40px;
+}
+
+.button {
+    background-color: #1b355f;
+    text-decoration: none;
+    padding: 14px 22px;
+    border: 1px;
+    margin: auto 4rem;
+    border-radius: 25px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition: .5s;
+}
+
+.button:hover {
+    background-color: #608bd1;
+}
+
+/* tarjetas */
+  .number-box h2{
+    font-size: 30px;
+    padding-bottom: 5px;
+  }
+  
+  .number-turn p{
+    font-size: 40px;
+  }

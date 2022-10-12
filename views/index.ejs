@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html>
-<%- include('./partials/head') %>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+<html lang="es">
+<%- include('partials/head', {title: "DHBC" }) %>
+<link rel="stylesheet" href="/stylesheets/style.css">
+  <script>
+    setTimeout("document.location = document.location", 60000)
+  </script>
+
   <body>
-    <%- include('./partials/header') %>
+    <%- include('./partials/header', {link_logo: "login"}) %>
       <main>
         <div class="title">
           <h1>Esté atento a su numero</h1>
