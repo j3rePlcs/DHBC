@@ -18,4 +18,12 @@ generator.addEventListener("click", function () {
         }
         return array;
     }
+    function generarAleatorios(cantidad) {
+        const caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+        const numeros = "0123456789".split("");
+        barajar(caracteres, numeros);
+        return caracteres.slice(0,1).join("") + x
+      }
+      console.log(generarAleatorios());
+      small.innerText = generarAleatorios();
 })
