@@ -44,8 +44,8 @@
 
 /* generar consulta */
 .tipo-consulta {
-    margin-bottom: 40px;
-}
+    margin-top: 7px;
+    position: fixed;}
 
 .tipo-consulta label{
     font-weight: bold;
