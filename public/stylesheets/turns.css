@@ -18,6 +18,7 @@
 .container-turn {
     display: flex;
     justify-content: space-evenly;
+    position: relative;
 }
 
 .boton {
@@ -45,7 +46,7 @@
 /* generar consulta */
 .tipo-consulta {
     margin-top: 7px;
-    position: fixed;}
+    position: absolute;}
 
 .tipo-consulta label{
     font-weight: bold;

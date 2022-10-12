@@ -7,8 +7,13 @@ header {
   justify-content: center;
   height: 100px;
   width: 100%;
+  top: 0;
+  position: absolute;
 }
 
+main {
+  margin-top: 100px;
+}
 .container-logo a img {
   width: 300px;
 }
