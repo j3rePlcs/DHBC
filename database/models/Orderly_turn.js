@@ -1,5 +1,4 @@
 module.exports = function (sequelize, DataTypes) {
-    const Orderly_turn = require("./Orderly_turn");
         let name = "Orderly_turn";
         let cols = {
             "id": {
@@ -44,4 +43,7 @@ module.exports = function (sequelize, DataTypes) {
             "as": "orderly",
             "foreignKey": "idOrderly_turn"
         })
-    )}
+    );
+        
+    return Orderly_turn
+}
