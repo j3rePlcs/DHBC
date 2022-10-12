@@ -1,11 +1,10 @@
 module.exports = function (sequelize, DataTypes) {
-    let name = "Orderly_turn";
+    let name = "Order";
     let cols = {
-        "id": {
-            "type": DataTypes.INTEGER,
-            "primaryKey": true,
-            "autoIncrement": true
-        },        
+        "id":{
+            type:DataTypes.INTEGER,
+            "primaryKey":true
+        },  
         "codeOrderly": {
             "type": DataTypes.STRING(45),
             "allowNull": false
@@ -34,23 +33,25 @@ module.exports = function (sequelize, DataTypes) {
         }
     };
         let config = {
-    "tableName": "orderly_turns",
-    "timestamps": true
+    "tableName": "orderly_turn",
+    "timestamps": true,
+    "createdAt":"created_at",
+    "updatedAt":"updated_at"
     };
-    const Orderly_turn = sequelize.define(name, cols, config);
-    Orderly_turn.associate = function ( models ){
+    const Order = sequelize.define(name, cols, config);
+    Order.associate = function (models){
 
-        Orderly_turn.hasMany(models.User,{
-            "as":"orderly_turn",
-            "foreingKey":"idUser"
+        Order.belongsTo(models.User,{
+            "as":"orderlyTurn",
+            "foreignKey":"idUser"
         })
 
-        Orderly_turn.hasMany(models.Operation_type,{
+        Order.belongsTo(models.Operation_type,{
             "as":"Operation_type",
-            "foreingKey":"idOperation_type"
+            "foreignKey":"idOperation_type"
         })
     }
 ;
     
-return Orderly_turn
+return Order
 }
