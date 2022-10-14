@@ -16,3 +16,27 @@
             </nav>
          </header>
          <h1>Detalle de Usuario</h1>
+         <ul>
+            <li>
+               Nombre de usuario: <%=user.length%>  <%=user.userName%>
+            </li>
+            <li>
+                Email: <%=user.email%>
+            </li>
+            <li>
+                Contraseña: <%=user.passwordUser%>
+            </li>
+            <li>
+                Fecha de Creacion: <%=user.created_at%>
+             </li>
+            <li>
+                Numero de orden:<%=user.id%>
+            </li>
+        </ul>
+            <a href="/users/editar/<%=user.id%>">
+            <button>Editar</button>
+            </a>
+            <footer>
+        </footer>
+    </body>
+</html>
