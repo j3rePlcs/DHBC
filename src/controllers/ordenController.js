@@ -32,3 +32,15 @@ let ordenController = {
             res.render("detalleOrden", {order:order})
         })
     },
+    editar: function(req,res){
+        let pedidoOrder = db.Order.findByPk(req.params.id); //pedidos asincronicos
+
+        let pedidoOperation_type = db.Operation_type.findAll();
+
+        let pedidoUsuario = db.User.findByPk(req.params.id);
+
+        Promise.all([pedidoOrder, pedidoOperation_type, pedidoUsuario])
+        .then(function([order, operation_type, usuario]){
+            res.render("editarOrden", {order:order, operation_type:operation_type, usuario:usuario})
+        })
+    },
