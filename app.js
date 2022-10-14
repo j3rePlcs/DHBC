@@ -7,9 +7,9 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login'); // agregado
-//var turnosRouter = require('./routes/turnos');
 var ordenRouter = require('./routes/orden'); //creado
-
+var logMiddleware = require('./middlewares/logMiddleware');//middleware
+//var {body, validationResult} = require('express-validator')
 
 var app = express();
 
@@ -22,6 +22,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(logMiddleware)//middleware
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

@@ -8,6 +8,4 @@ router.post('/login', function(req, res, next) {
 // Regitro de usuario
 router.get("/register",userController.createView)
 router.post("/register",userController.create)
-
-
 module.exports = router;
