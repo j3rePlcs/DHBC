@@ -1,4 +1,4 @@
-let db = require("../database/models");
+let db = require("./../../database/models");
 
 let userController = {
     crear: function (req,res){

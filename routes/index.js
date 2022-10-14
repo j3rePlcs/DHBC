@@ -15,8 +15,8 @@ router.get('/admin', function(req, res, next) {
   res.render('admin');
 });
 
-const userRoute = require("./users")
-const loginRoute = require("./login")
+// const userRoute = require("./users")
+//const loginRoute = require("./login")
 // const turnosRoute = require("./turnos");
 
 // router.use("/turnos", turnosRoute)
