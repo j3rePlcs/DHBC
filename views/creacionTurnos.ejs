@@ -23,3 +23,28 @@
                 <div>
                     <label for="">Caja</label>
                     <input type="text" name="caja">
+                </div>
+                <div>
+                    <label for="">Fecha de Creacion</label>
+                    <input type="date" name ="creacion">
+                </div>
+                <div>
+                    <label for="">Tipo de Operacion</label>
+                    <select name="operacion">
+                        <% for (let i =0; i < operation_type.length; i++) { %>
+                        <option value="<%=operation_type[i].id%>">
+                            <%=operation_type[i].nameOperation%>
+                        </option>
+                        <% } %>
+                    </select>
+                <div>
+                    <label for="">Numero de Usuario</label>
+                    <input type="text" name="usuario">
+                </div>
+                </div>
+                <button type="submit">Crear</button>
+            </form>
+            <footer>
+        </footer>
+    </body>
+</html>
