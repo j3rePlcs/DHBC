@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/stylesheets/style-orden.css">
+    </head>
+   <body>
+         <header>
+            <nav>
+                 <ul>
+                    <li>
+                       <a class="letra" href="/users/crear">Crear Usuario</a>
+                    </li>
+                    <li>
+                       <a class="letra" href="/users">Ver Usuario</a>
+                    </li>
+                 </ul>
+            </nav>
+         </header>
+         <h1>Editar Usuario</h1>
+         <form action="/users/editar/<%=user.id%>" method="POST">
+             <div>
+                 <label for="">Nombre de usuario</label>
+                 <input type="text" name="nombre" value="<%=user.userName%>">
+             </div>
+             <div>
+                 <label for="">Email</label>
+                 <input type="text" name="email" value="<%=user.email%>">
+             </div>
+             <div>
+                 <label for="">Contraseña</label>
+                 <input type="text" name="contraseña" value="<%=user.passwordUser%>">
+             </div>
+             <div>
+                 <label for="">Fecha de Creacion</label>
+                 <input type="date" name ="creacion" value="<%=user.created_at%>">
+             </div>
+             <div>
+                 <label for="">Numero de Usuario</label>
+                 <input type="text" name="codigo" value="<%=user.id%>">
+             </div>
+             <button type="submit">Editar</button>
+         </form>
+         <footer>
+        </footer>
+    </body>
+</html>

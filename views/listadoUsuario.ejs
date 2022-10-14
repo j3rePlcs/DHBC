@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/stylesheets/style-orden.css">
+    </head>
+   <body>
+         <header>
+            <nav>
+                 <ul>
+                    <li>
+                       <a class="letra" href="/users/crear">Crear Usuario</a>
+                    </li>
+                    <li>
+                       <a class="letra" href="/users">Ver Usuario</a>
+                    </li>
+                 </ul>
+            </nav>
+         </header>
+         <h1>Lista de Usuario</h1>
+    <ul>
+        <% for (let i = 0; i < user.length; i++){ %>
+            <li>
+                <a href= "/users/<%=user[i].id%>">
+                <%=user[i].userName%>
