@@ -18,3 +18,9 @@ let ordenController = {
         })
         res.redirect("/orden");
     },
+    listado: function(req,res){
+        db.Order.findAll()
+        .then(function(order){
+            res.render("listadoOrden", {order:order})
+        })
+    },
