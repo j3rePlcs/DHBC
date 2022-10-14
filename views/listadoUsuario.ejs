@@ -16,8 +16,17 @@
             </nav>
          </header>
          <h1>Lista de Usuario</h1>
-    <ul>
-        <% for (let i = 0; i < user.length; i++){ %>
-            <li>
-                <a href= "/users/<%=user[i].id%>">
-                <%=user[i].userName%>
+         <ul>
+             <% for (let i = 0; i < user.length; i++){ %>
+                 <li>
+                     <a href= "/users/<%=user[i].id%>">
+                     <%=user[i].userName%>
+                     </a>
+                 </li>
+            <% } %>
+         </ul>
+         <footer>
+        </footer>
+    </body>
+</html>
+       
