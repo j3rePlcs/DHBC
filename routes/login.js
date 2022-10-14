@@ -5,7 +5,4 @@ const userController = require("./../src/controllers/userController")
 router.post('/login', function(req, res, next) {
   res.render('login');
 });
-// Regitro de usuario
-router.get("/register",userController.createView)
-router.post("/register",userController.create)
 module.exports = router;
