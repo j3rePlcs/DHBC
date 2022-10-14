@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: rgb(248, 236, 238);
+  }
+  
+  a {
+    color: #5d445e;
+  }
+  header {
+    background-color: rgb(182, 212, 212);
+    color:rgb(15, 15, 15)
+  }
+  nav ul {
+    display:flex;
+    list-style-type: none;
+  }
+  nav ul li {
+    margin-right: 10px;
+  }
+  .letra{
+    color:black
+  }
+  .lista-ordenes{
+    color: rgb(88, 59, 14);
+  }
