@@ -9,3 +9,12 @@ router.post("/crear", userController.guardar)
 //lectura de usuario
 router.get("/", userController.listado)
 
+//detalle de usuario
+router.get("/:id", userController.detalle)
+
+//actualizacion de usuario
+router.get("/editar/:id", userController.editar)
+router.post("/editar/:id", userController.actualizar)
+
+
+module.exports = router;
