@@ -44,3 +44,18 @@ let ordenController = {
             res.render("editarOrden", {order:order, operation_type:operation_type, usuario:usuario})
         })
     },
+    actualizar: function(req,res){
+        db.Order.update({
+            // id:req.body.id,
+            codeOrderly: req.body.codigo,
+            box:req.body.caja,
+            created_at:req.body.creacion,
+            idOperation_type:req.body.operacion,
+            idUser:req.body.usuario
+        }, {
+            where:{
+                id: req.params.id
+            }
+        });
+        res.redirect("/orden/" + req.params.id)
+    },
