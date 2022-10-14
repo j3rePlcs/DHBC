@@ -31,14 +31,16 @@ let userController = {
             res.render("detalleUsuario", {user:user})
         })
     },
+    editar: function(req,res){
+        let pedidoUser = db.User.findByPk(req.params.id); //pedidos asincronicos
 
-    edit: function (req, res) {
-        db.User.findByPk(req.params.id)
-            .then(function (User) {
-                res.render("editarUser")
-            })
+        let pedidoOrder= db.Order.findByPk(req.params.id);
 
-
+        Promise.all([pedidoUser, pedidoOrder])
+        .then(function([user, order]){
+            res.render("editarUsuario", {user:user, order:order})
+        })
+    },
     }
-}
+
 module.exports = userController
