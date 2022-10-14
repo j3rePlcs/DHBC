@@ -1,24 +1,46 @@
-<h1>Crear usuario</h1>
-<form action="/users/crear" method="POST">
-    <div>
-        <label for="">Nombre de Usuario</label>
-        <input type="text" name="nombre">
-    </div>
-    <div>
-        <label for="">Email</label>
-        <input type="text" name="email">
-    </div>
-    <div>
-        <label for="">Contraseña</label>
-        <input type="password" name="contraseña">
-    </div>
-    <div>
-        <label for="">Fecha de Creacion</label>
-        <input type="date" name ="creacion">
-    </div>
-    <!-- <div>
-        <label for="">Numero de usuario</label>
-        <input type="text" name ="codigo">
-    </div> -->
-    <button type="submit">Crear</button>
-</form>
+<html>
+    <head>
+        <link rel="stylesheet" href="/stylesheets/style-orden.css">
+    </head>
+   <body>
+         <header>
+            <nav>
+                 <ul>
+                    <li>
+                       <a class="letra" href="/orden/crear">Crear orden</a>
+                    </li>
+                    <li>
+                       <a class="letra" href="/orden">Ver orden</a>
+                    </li>
+                 </ul>
+            </nav>
+         </header>
+                 <h1>Crear usuario</h1>
+                 <form action="/users/crear" method="POST">
+             <div>
+                 <label for="">Nombre de Usuario</label>
+                 <input type="text" name="nombre">
+             </div>
+             <div>
+                 <label for="">Email</label>
+                 <input type="text" name="email">
+             </div>
+             <div>
+                 <label for="">Contraseña</label>
+                 <input type="password" name="contraseña">
+             </div>
+             <div>
+                 <label for="">Fecha de Creacion</label>
+                 <input type="date" name ="creacion">
+             </div>
+             <!-- <div>
+                 <label for="">Numero de usuario</label>
+                 <input type="text" name ="codigo">
+             </div> -->
+             <button type="submit">Crear</button>
+           </form>
+           <footer>
+        </footer>
+    </body>
+ </html>
+        
