@@ -1,19 +1,21 @@
-//crud
-const db = require("./../../database/models");
-// controlador de modelos
-const userController = {
+let db = require("../database/models");
 
-    list: function (req, res) {
-        db.User.findAll({
-            include:[{association:"orderlyTurn"}]
-        })
-        .then(users=>{users.dataValues})
-        .then(users=>{
-            res.render("turns",{users});
-        })
+let userController = {
+    crear: function (req,res){
+     db.User.findAll()
+     .then(function(user){
+        return res.render("creacionUsuario", {user:user});
+     })
     },
-    createView:function(req, res) {
-        res.render("register")
+    guardar: function(req,res){
+        db.User.create({
+            id:req.body.codigo,
+            userName: req.body.nombre,
+            email:req.body.email,
+            passwordUser:req.body.contraseña,
+            created_at:req.body.creacion
+        })
+        res.redirect("/users");
     },
 
     create: function (req, res) {
