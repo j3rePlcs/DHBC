@@ -24,3 +24,22 @@
                  Caja de Atencion: <%=order.box%>
              </li>
               <!-- <li>
+                      Fecha de Creacion: <%=order.created_at%>
+              </li> -->
+             <li>
+                Tipo de Operacion: <%=order.operation_type.nameOperation%>
+            </li>
+            <li>
+                Nombre de Usuario:<%=order.user.userName%>
+            </li>
+        </ul>
+            <a href="/orden/editar/<%=order.id%>">
+            <button>Editar</button>
+            </a>
+            <form action="/orden/borrar/<%=order.id%>" method="POST">
+                <button type="submit">Borrar</button>
+            </form>
+            <footer>
+       </footer>
+   </body>
+</html>
