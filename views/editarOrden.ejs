@@ -1,0 +1,26 @@
+html>
+    <head>
+        <title>Mi sitio</title>
+        <link rel="stylesheet" href="/stylesheets/style-orden.css">
+    </head>
+   <body>
+         <header>
+            <p>Mi sitio</p>
+            <nav>
+                 <ul>
+                    <li>
+                       <a class="letra" href="/orden/crear">Crear orden</a>
+                    </li>
+                    <li>
+                       <a class="letra" href="/orden">Ver orden</a>
+                    </li>
+                 </ul>
+            </nav>
+         </header>
+            <h1>Editar turno</h1>
+            <form action="/orden/editar/<%=order.id%>" method="POST">
+                <div>
+                    <label for="">Codigo</label>
+                    <input type="text" name="codigo" value="<%=order.codeOrderly%>">
+                </div>
+                <div>
