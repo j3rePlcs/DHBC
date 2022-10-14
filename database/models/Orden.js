@@ -1,10 +1,11 @@
 module.exports = function (sequelize, DataTypes) {
     let name = "Order";
-    let cols = {
-        "id":{
-            type:DataTypes.INTEGER,
-            "primaryKey":true
-        },  
+    let cols = { 
+        "id": {
+            "type": DataTypes.INTEGER,
+            "primaryKey": true,
+            "autoIncrement": true
+        },
         "codeOrderly": {
             "type": DataTypes.STRING(45),
             "allowNull": false
@@ -19,11 +20,11 @@ module.exports = function (sequelize, DataTypes) {
         },
         "updated_at": {
             "type": DataTypes.DATE,
-            "allowNull": false
+            "allowNull": true
         },
         "delete_at": {
             "type": DataTypes.DATE,
-            "allowNull": false
+            "allowNull":true
         },
         "idOperation_type": {
             "type": DataTypes.INTEGER
@@ -36,22 +37,21 @@ module.exports = function (sequelize, DataTypes) {
     "tableName": "orderly_turn",
     "timestamps": true,
     "createdAt":"created_at",
-    "updatedAt":"updated_at"
+    "updatedAt":"updated_at",
+    "deleteAt": "delete_at"
     };
     const Order = sequelize.define(name, cols, config);
     Order.associate = function (models){
-
         Order.belongsTo(models.User,{
-            "as":"orderlyTurn",
+            "as":"user",
             "foreignKey":"idUser"
         })
 
         Order.belongsTo(models.Operation_type,{
-            "as":"Operation_type",
-            "foreignKey":"idOperation_type"
+            "as":"operation_type",
+            "foreignKey":"idOperation_type"           
         })
     }
-;
     
 return Order
 }

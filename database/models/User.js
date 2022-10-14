@@ -23,15 +23,19 @@ module.exports = function (sequelize, DataTypes) {
     };
     let config = {
         "tableName": "users",
-        "timestamps": true
+        "timestamps": true,
+        "createdAt": "created_at",
+        "updatedAt": "updated_at"
     };
+    const User = sequelize.define(name, cols, config);
 
-    const User = sequelize.define(name, cols, config)
-    User.associate = function(models){
-        User.belongsTo(models.Orderly_turn, {
-            "as": "orderly_turn",
+    User.associate = function (models) {
+       User.hasMany(models.Order, {
+            "as": "order",
             "foreignKey": "idUser"
         });
-    }
+
     };
+
     return User
+}
