@@ -24,3 +24,11 @@ let ordenController = {
             res.render("listadoOrden", {order:order})
         })
     },
+    detalle: function(req,res){
+        db.Order.findByPk(req.params.id, {
+            include:[{association:"operation_type"}, {association:"user"}]
+        })
+        .then(function(order){
+            res.render("detalleOrden", {order:order})
+        })
+    },
