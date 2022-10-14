@@ -41,6 +41,19 @@ let userController = {
             res.render("editarUsuario", {user:user, order:order})
         })
     },
+    actualizar: function(req,res){
+        db.User.update({
+            id: req.body.usuario,
+            userName: req.body.nombre,
+            email:req.body.email,
+            passwordUser:req.body.contraseña,
+            created_at:req.body.creacion
+        }, {
+            where:{
+                id: req.params.id
+            }
+        });
+        res.redirect("/users/" + req.params.id)
     }
-
+}
 module.exports = userController
