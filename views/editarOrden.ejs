@@ -24,3 +24,26 @@ html>
                     <input type="text" name="codigo" value="<%=order.codeOrderly%>">
                 </div>
                 <div>
+                    <label for="">Caja</label>
+                    <input type="text" name="caja" value="<%=order.box%>">
+                </div>
+                <div>
+                    <label for="">Fecha de Creacion</label>
+                    <input type="date" name ="creacion" value="<%=order.created_at%>">
+                </div>
+                <div>
+                    <label for="">Tipo de Operacion</label>
+                    <select name="operacion">
+                        <% for (let i =0; i < operation_type.length; i++) { %>
+                            <% if (operation_type[i].id == order.idOperation_type) { %>
+                                <option value="<%=operation_type[i].id%>" selected>
+                                    <%=operation_type[i].nameOperation%>
+                                </option>
+                            <% } else { %>
+                                <option value="<%=operation_type[i].id%>">
+                                    <%=operation_type[i].nameOperation%>
+                                </option>                 
+                            <% } %>
+                        <% } %>
+                    </select>
+                <div>
