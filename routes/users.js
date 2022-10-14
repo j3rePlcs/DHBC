@@ -1,8 +1,11 @@
 var express = require('express');
-const userController = require('../src/controllers/userController');
 var router = express.Router();
+var userController = require("../controllers/userController")
 
-router.get("/crear")
-router.get("/",userController.list)
-module.exports = router;
+//creacion de usuario
+router.get("/crear",userController.crear)
+router.post("/crear", userController.guardar)
+
+//lectura de usuario
+router.get("/", userController.listado)
 
