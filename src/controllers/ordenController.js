@@ -59,3 +59,14 @@ let ordenController = {
         });
         res.redirect("/orden/" + req.params.id)
     },
+    borrar: function(req,res){
+        db.Order.destroy({
+            where: {
+                id:req.params.id
+            }
+        })
+        res.redirect("/orden")
+    }
+}
+
+module.exports = ordenController;
