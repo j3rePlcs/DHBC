@@ -1,11 +1,9 @@
 <html>
     <head>
-        <title>Mi sitio</title>
         <link rel="stylesheet" href="/stylesheets/style-orden.css">
     </head>
    <body>
          <header>
-            <p>Mi sitio</p>
             <nav>
                  <ul>
                     <li>
@@ -18,3 +16,16 @@
             </nav>
          </header>
          <h1>Lista de turno</h1>
+         <ul>
+            <% for (let i = 0; i < order.length; i++){ %>
+                <li>
+                    <a href= "/orden/<%=order[i].id%>">
+                    <%=order[i].codeOrderly%>
+                    </a>
+                </li>
+           <% } %>
+        </ul>
+        <footer>
+       </footer>
+   </body>
+</html>
